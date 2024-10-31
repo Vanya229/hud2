@@ -1,0 +1,126 @@
+body {
+	/*background: url(../img/background.png);*/
+	overflow: hidden;
+}
+
+.notifications_frame {
+    /*position: absolute;*/
+    /*width: 14%;
+    height: 350px;
+    bottom: 22%;
+    left: 2%;*/
+	margin: 0 auto;
+	width: 100%;
+	min-width: 450px;
+	max-width: 450px;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+    height: 980px;
+    bottom: 5.5vh;
+    /*left: 75.2vh;*/
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.notifications_frame::-webkit-scrollbar {
+    width: 0;
+}
+
+.notifications_frame .notifications_frame_block {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+}
+
+.notifications_frame_block .notify_bock {
+    position: relative;
+	width: 100%;
+    height: auto;
+}
+
+/* .notify_bock .notify_bock_text {
+    position: relative;
+    width: auto;
+    height: auto;
+    min-height: 5vh;
+    background: #212121b9;
+    box-sizing: border-box;
+    border-radius: 0.1vh;
+    padding: 10px;
+    margin: 7px 1px 0px 1px;
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.7vh;
+    line-height: 2vh;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    word-break: normal;
+    justify-content: center;
+    display: flex;
+} */
+
+.notify_bock .notify_bock_text {
+	/*background: linear-gradient(240deg, #35332E, #B77F38);*/
+
+	background: linear-gradient(180deg, #35332ECD, #3876B7CD);
+	
+	/*background: linear-gradient(180deg, #35332ECD, #F04245CD);*/
+	
+    margin-top: 10px;
+    padding: 15px;
+    font-family: Roboto;
+    padding-left: 65px;
+	box-shadow: 0px 0px 15px #2f223780;
+}
+
+.notify_header {
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.notify_text {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.notify-line {
+    margin-left: 0px;
+    height: 3px;
+    background-color: #53a4f4;
+    position: absolute;
+    width: 100%;
+    bottom: 0;  
+}
+
+.typeClass {
+    position: absolute; 
+    margin-left: -50px; 
+    margin-top: -2px;    
+}
+
+.notify_type_money {
+	opacity: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	font-weight: 600;
+	margin: 0 auto;
+	color: #33cc66;
+	font-family: Roboto;
+	font-size: 30px;
+	text-shadow: 0px 0px 1px #33cc66;
+}
+
+

@@ -1,0 +1,231 @@
+@font-face {
+	font-family: "Proxima Sm"; 
+
+	src: url("ProximaNova-Semibold.ttf") format("truetype"); 
+	font-style: normal; 
+	font-weight: normal; 
+} 
+		
+body {
+    /* background-color: #777; */
+    font-family: "Proxima Sm";
+    letter-spacing: -0.5px;
+    /*background: url(../img/background_2.png)*/
+    filter: drop-shadow(1px 1px 5px rgba(34, 34, 34, 0.788));
+}
+
+.box {
+    float: right;
+	/*background: #35332Ea5;*/
+    padding: 20px;
+    border-radius: 12px;
+    /*box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.507); */
+    margin: 10px;
+}
+
+.time_date {
+    display: flex;
+    align-items: center;
+}
+
+.serverName {
+    margin-right: 15px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: -0px;
+}
+
+.rolePlay {
+    /* position: absolute; */
+    margin-top: 0px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.568);
+}
+
+.block {
+    display: block;
+}
+
+.time {
+    color: #fff;
+    margin-left: 5px;
+    padding-right: 70px;
+    font-size: 17px;
+}
+
+.date {
+    color: #ffffff99;
+    margin-left: 5px;
+    font-size: 0.55vw;    
+}
+
+.fist {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_fist {
+    /* padding-right: 20px; */
+}
+
+.progresss {
+    padding-left: 15px;
+}
+ 
+@keyframes progress_bar {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -40px 0;
+    }
+}
+  
+.progress-bar
+{
+   transition: width 1s linear;
+}
+  
+.progress-bar:after
+{
+   animation: progress_bar 0.8s linear infinite;
+}
+
+
+progress {
+    background: rgba(255, 255, 255, 0.15);
+    height: 4px;
+    border-radius: 10px;
+    width: 90px;
+    box-shadow: 1px 1px 11px rgb(65, 64, 64);
+}
+
+progress::-webkit-progress-bar {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #f04245;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.img {
+    margin-right: 10px;
+}
+
+.armour::-webkit-progress-value {
+    background-color: #fff;
+}
+
+.moneyClass {
+    display: flex;
+    margin-top: 25px;
+    /*align-items: center;*/
+    justify-content: flex-end;
+    /*justify-content: center;*/
+    margin-left:  auto;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 1px 1px 11px #888;
+}
+
+.logoRub {
+    padding-left: 5px;
+    color: #23cc56;
+    background: url(../img/valuta.png);
+    width: 20px;
+    background-position: center;
+    background-size: 18px;
+    background-repeat: no-repeat;
+}
+
+.wanted {
+    position: absolute;
+    right: 0;
+    background: #211c2497;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.507);
+    margin: 28px;
+    top: 280px;
+    width: 273px;
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+}
+
+.textWanted {
+    color: rgba(255, 255, 255, 0.699);
+    font-size: 15px;
+    font-weight: 700;
+    font-style: italic;
+    margin-left: 15px;
+}
+
+.boxWanted {
+    margin-top: 15px;
+    display: flex;
+    background: linear-gradient(to top left, #2A3A33DD, #626064DD);
+    width: 200px;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 10px;
+    padding: 7px;
+    box-shadow: 1px 1px 21px rgba(0, 0, 0, 0.507);
+}
+
+.jobStats {
+    font-family: "Roboto";
+    margin-top: 20px;
+    background: linear-gradient(to top left, #2A3A33DD, #626064DD);
+    padding: 15px;
+    border-radius: 10px;
+
+    box-shadow: 1px 1px 11px rgba(0, 0, 0, 0.507);
+}
+
+.element {
+    display: flex;
+    color: #fff;
+}
+
+.item {
+    font-weight: 500;
+}
+
+.item_right {
+    margin-left: auto;
+    color: #2be644;
+}
+
+.jobName {
+    color: #ffcc00;
+    font-size: 13pt;
+    font-weight: 600;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#ammo {
+    color: #fff;
+    font-size: 0.7vw;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.307);
+}

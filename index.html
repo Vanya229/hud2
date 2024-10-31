@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/hud.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">    
+</head>
+
+<body>
+    <div class="box">
+        <div class="logoName">
+            <div class="time_date">
+                <img src="img/time.png" width="20px" alt="" class="margin-right: 10px;">
+                <div class="block">
+                    <div id="time" class="time">19:34</div>
+                    <div id="date" class="date">23.07.2021</div>
+                </div>
+                <!-- <div class="block">
+                    <div class="serverName">Bess</div>
+                    <div class="rolePlay">Roleplay</div>
+                </div> -->
+                <img src="img/logo_serv.png" width="115px" class="logo" alt="">
+            </div>
+            <div class="fist">
+                <div style="padding-right: 20px; text-align: center;">
+                    <img id="weapon" class="img_fist" src="img/0.png" width="60px" alt="">
+                    <div id="ammo">0 / 0</div>
+                </div>
+                <div class="block progresss">
+                    <div class="progress-bar">
+                        <img class="img" width="16px" src="img/health.png" alt="">
+                        <progress id="hp_progress" value="30" max="100"></progress>
+                    </div>                
+                    <div class="progress-bar">
+                        <img class="img" width="16px" src="img/armour.png" alt="">
+                        <progress id="armour_progress" class="armour" value="30" max="100"></progress>
+                    </div>   
+                </div>                  
+            </div>
+
+			<div class="moneyClass">
+				<div class="money" id="money">1 000 000 000</div>
+				<div class="logoRub"></div>
+			</div>
+    </div>
+    <script>
+        setInterval(function() {
+            var d = new Date();
+            var month = d.getMonth() + 1;
+            document.getElementById("time").innerText = `${d.getHours().toString().padStart(2, '0') + ":" + d.getMinutes().toString().padStart(2, '0')}`;
+            document.getElementById("date").innerText = `${d.getDate().toString().padStart(2, '0')}.${month.toString().padStart(2, '0')}.${d.getFullYear()}`;
+        }, 1000);
+        cef.emit("game:hud:setComponentVisible", "interface", false);
+        cef.emit("game:data:pollPlayerStats", true, 50);
+        cef.on("game:data:playerStats", (hp, max_hp, arm, breath, wanted, weapon, ammo, max_ammo, money, speed) => {
+            document.getElementById('hp_progress').value = `${hp}`;
+            document.getElementById('armour_progress').value = `${arm}`;     
+            var moneyInt = (money).toLocaleString('ru');
+            document.getElementById("money").innerText = `${moneyInt}`;
+
+            if(weapon > 0) {
+                document.getElementById("ammo").style = "display: block;"; 
+                document.getElementById("ammo").innerText = `${ammo} / ${max_ammo}`;
+                document.getElementById("weapon").src = `img/${weapon}.png`;
+
+            }
+            else {
+                document.getElementById("ammo").style = "display: 12;";
+                document.getElementById("weapon").src = "img/0.png";
+            }
+        });
+        
+    </script>
+</body>
+
+</html>
